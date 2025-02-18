@@ -51,7 +51,6 @@ int main(int argc, const char * argv[]) {
     double timer = (double)(Stop - Start)/CLOCKS_PER_SEC;
     printf("Time Elapsed: %0.13f", timer);
     
-    
     return 0;
     
 }
