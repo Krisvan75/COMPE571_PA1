@@ -9,7 +9,7 @@
 
 
 int main(int argc, const char * argv[]) {
-    int inputNum = atoi(argv[1]);
+    long long inputNum = atoll(argv[1]);
     long long Sum=0;
     
     clock_t Start, Stop;
@@ -22,6 +22,6 @@ int main(int argc, const char * argv[]) {
     Stop = clock();
     printf("Sum: %lld \n",Sum);
     double timer = (double)(Stop - Start)/CLOCKS_PER_SEC;
-    printf("Time Elapsed: %0.20f", timer);
+    printf("Time Elapsed: %0.13f", timer);
     
 }
