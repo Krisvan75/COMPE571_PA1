@@ -2,7 +2,7 @@ CFLAGS= -Wall
 
 all: seqWL Mthreads Mtasks
 
-seqWL: sequentialWORKLOAD.c 
+seqWL: sequential.c 
 	gcc $(CFLAGS) -o seqWL sequential.c
 
 Mthreads: multithreading.c
