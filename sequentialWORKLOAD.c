@@ -7,13 +7,13 @@
 #include <stdlib.h>
 #include<time.h>
 
+unsigned __int128 Sum=0;
 
 int main(int argc, const char * argv[]) {
     unsigned long long N = atoll(argv[1]);
-    unsigned __int128 Sum;
     
+
     clock_t Start, Stop;
-    Sum=0;
     Start = clock();
     for(unsigned long long i=1; i<N; i++){
         Sum += i;

@@ -35,7 +35,7 @@ int main(int argc, const char *argv[]){
             unsigned __int128 localSum = 0;
             
             unsigned long long start = i*Nrange;
-            unsigned long long end = (i==numProcesses-1) ? N : (i+1)*Nrange;
+            unsigned long long end = (i==numProcesses-1) ? N : ((i+1)*Nrange);
             
             
             for(unsigned long long j=start; j<end; j++){

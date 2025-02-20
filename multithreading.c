@@ -24,8 +24,6 @@ void *Workload(void *args){
 
 }
 
-
-
 int main(int argc, const char * argv[]) {
     unsigned long long N = atoll(argv[1]);
     int numThreads = atoi(argv[2]);
@@ -40,9 +38,10 @@ int main(int argc, const char * argv[]) {
     Start = clock();
     for(int i=0; i<numThreads; i++){
         thread_args[i][0] = (unsigned __int128) i * Nrange;
-        thread_args[i][1] = (unsigned __int128)(i==numThreads-1) ? N : (i+1) * Nrange;
+        thread_args[i][1] = (unsigned __int128)(i==numThreads-1) ? N : ((i+1)*Nrange);
         pthread_create(&threads[i], NULL, Workload, (void *)&thread_args[i]);   
     }
+
     for(int i=0; i<numThreads; i++){
         pthread_join(threads[i], NULL);
         total_sum += thread_args[i][2];
