@@ -9,19 +9,17 @@
 
 
 int main(int argc, const char * argv[]) {
-    long long inputNum = atoll(argv[1]);
-    long long Sum=0;
+    unsigned long long N = atoll(argv[1]);
+    unsigned __int128 Sum;
     
     clock_t Start, Stop;
+    Sum=0;
     Start = clock();
-    for(int i=1; i<inputNum; i++){
-        
+    for(unsigned long long i=1; i<N; i++){
         Sum += i;
-        
     }
     Stop = clock();
-    printf("Sum: %lld \n",Sum);
+    //printf("Sum: %lld \n",Sum);
     double timer = (double)(Stop - Start)/CLOCKS_PER_SEC;
-    printf("Time Elapsed: %0.13f", timer);
-    
+    printf("Sum of %llu integers\tTime taken to compute: %0.8f\n", N,timer);
 }
