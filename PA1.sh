@@ -18,38 +18,38 @@ NT_3=8
 
 echo "Starting sequential Workloads..."
 echo "----------------------------------------------------------------------------------------------------------------------"
-./SeqWL $N_1
-./SeqWL $N_2
-./SeqWL $N_3
+./seqWL $N_1
+./seqWL $N_2
+./seqWL $N_3
 echo "----------------------------------------------------------------------------------------------------------------------"
 echo "Sequential Workloads complete."
 
 echo "Starting Multithreaded Workloads..."
 echo "----------------------------------------------------------------------------------------------------------------------"
-./Mthreads $N_1 $NT_1
-./Mthreads $N_1 $NT_2
-./Mthreads $N_1 $NT_3
-./Mthreads $N_2 $NT_1
-./Mthreads $N_2 $NT_2
-./Mthreads $N_2 $NT_3
-./Mthreads $N_3 $NT_1
-./Mthreads $N_3 $NT_2
-./Mthreads $N_3 $NT_3
+./mthreads $N_1 $NT_1
+./mthreads $N_1 $NT_2
+./mthreads $N_1 $NT_3
+./mthreads $N_2 $NT_1
+./mthreads $N_2 $NT_2
+./mthreads $N_2 $NT_3
+./mthreads $N_3 $NT_1
+./mthreads $N_3 $NT_2
+./mthreads $N_3 $NT_3
 echo "----------------------------------------------------------------------------------------------------------------------"
 
 echo "Multithreaded Workloads complete."
 
 echo "Starting Multitasking Workloads..."
 echo "----------------------------------------------------------------------------------------------------------------------"
-./Mtasks $N_1 $NT_1
-./Mtasks $N_1 $NT_2
-./Mtasks $N_1 $NT_3
-./Mtasks $N_2 $NT_1
-./Mtasks $N_2 $NT_2
-./Mtasks $N_2 $NT_3
-./Mtasks $N_3 $NT_1
-./Mtasks $N_3 $NT_2
-./Mtasks $N_3 $NT_3
+./mtasks $N_1 $NT_1
+./mtasks $N_1 $NT_2
+./mtasks $N_1 $NT_3
+./mtasks $N_2 $NT_1
+./mtasks $N_2 $NT_2
+./mtasks $N_2 $NT_3
+./mtasks $N_3 $NT_1
+./mtasks $N_3 $NT_2
+./mtasks $N_3 $NT_3
 echo "----------------------------------------------------------------------------------------------------------------------"
 echo "Multitasking Workloads complete."
 

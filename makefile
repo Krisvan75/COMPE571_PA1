@@ -1,18 +1,18 @@
 CFLAGS= -Wall
 
-all: seqWL Mthreads Mtasks
+all: seqWL mthreads mtasks
 
 seqWL: sequential.c 
 	gcc $(CFLAGS) -o seqWL sequential.c
 
-Mthreads: multithreading.c
-	gcc $(CFLAGS) -o Mthreads multithreading.c
+mthreads: multithreading.c
+	gcc $(CFLAGS) -o mthreads multithreading.c
 
-Mtasks: multitasking.c
-	gcc $(CFLAGS) -o MTasks multitasking.c
+mtasks: Multitasking.c
+	gcc $(CFLAGS) -o mtasks Multitasking.c
 
 clean:
-	rm -f seqWL Mthreads Mtasks
+	rm -f seqWL mthreads mtasks
 
 .PHONY: all clean
 
